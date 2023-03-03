@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+/*ハングル文字 font-family: 'Noto Serif KR', serif; */
+
+*{
+box-sizing: border-box;
+margin:0;
+padding:0;
+}
+
+
+.header-inner{
+    display:flex;
+    background-image:url ("../img/韓国風模様.jpg") no-repeat center center;
+}
+
+h1{
+font-size: 20px;
+margin: 20 auto;
+padding-left: 10px;
+}
+
+.movie-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /*アスペクト比 16:9の場合の縦幅*/
+  height: 0;
+  overflow: hidden;
+}
+
+.movie-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+section.sentence p{
+  text-align: center;
+}
+
+
+/******* グリッド設定*******/
+ h2{
+margin: 10px 10px;
+
+ }
+
+ .grid p {
+  margin-left: 10px;
+ }
+
+ul{
+list-style: none;
+}
+
+h2{
+  border-left: 4px solid #eb8f8f;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+section.grid ul img{
+  display:block;
+  max-width: 100px;
+}
+
+.container{
+  width:100%;
+  height:60vh;
+  margin:30px auto;
+  display:grid;
+  /* border: 1px solid #000; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 130px 130px 130px;
+  grid-gap:20px; 
+  padding-left: 10px;
+ background-color:lavender;
+ border-radius: 5px;
+ object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+      grid-auto-columns: auto;
+  }
+}
+
+
+li.container img{
+  width:160px;
+  height:160px;
+}
+
+.container li p {
+display: block;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+
+/********* 写真スライダー********/
+
+.slider
+{
+  margin:30px;
+ 
+}
+
+
+.slider-wrap {
+	animation: scroll 30s linear infinite;
+	display: flex;
+	/* width: calc(250px * 12); */
+  width:1000px;
+	height:100%;
+}
+
+@keyframes scroll{
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 6));
+    }
+  }
+
+.slide-image{
+width:400px;
+height:260px;
+}
+
+  @media screen and (max-width:768px){
+  .slide-image{
+    width:200px;
+    height:130px;
+  }
+}
+
+/****** レシピ内容********/
+
+h1::before{
+  content:'\f004'; 
+  font-family: "Font Awesome 6 Free";
+  font-weight:900;
+  color:#eb8f8f ;
+ 
+}
+
+h1::after{
+  content:'\f004'; 
+  font-family: "Font Awesome 6 Free";
+  font-weight:900;
+  color:#eb8f8f ;
+ 
+}
+
+
+
+
+
+
+h1.page-title{
+  margin:0 auto;
+}
+
+
+h1.page-title{
+  color:blue;
+  padding-left: 20PX;
+  /* border:1px solid #000; */
+  margin-left: 20px;
+}
+
+section.recipe.menu{
+  display:flex;
+ flex-basis: 50%;
+}
+
+div.flex-item img {
+  width: 90%;
+  height: 50vh;
+  object-fit: cover;
+  vertical-align: bottom;
+ margin-top: 10px;
+}
+
+.flex .recipe {
+  width: 50%;
+  padding: 40px 5% 0 5%;
+}
+
+.recipe .page-title {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+.recipe .content-title {
+  border-bottom: solid 1px #ccc;
+  font-size: 1.25rem;
+  padding-bottom: 5px;
+  margin: 40px 0 15px 0;
+}
+
+
+dl.ingredient-list {
+  display: flex;
+  justify-items: 50%;
+   flex-wrap: wrap; 
+}
+/*
+border-bottom に「dotted」を指定して点線にする
+*/
+
+dl.ingredient-list{
+display: flex;
+flex-wrap: wrap;
+}
+
+
+dl.ingredient-list dt {
+  width: 85%;
+  border-bottom: dotted 1px #ccc;
+  padding: 6px 0;
+}
+dl.ingredient-list dd {
+  width: 15%;
+  border-bottom: dotted 1px #ccc;
+  padding: 6px 20px;
+  text-align: right;
+}
+
+ol.step-list li {
+  border-bottom: dotted 1px #ccc;
+  padding: 6px 0;
+  margin-left: 20px;
+
+}
+
+div.btn {
+  
+  margin-top: 30px;
+}
